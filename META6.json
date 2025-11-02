@@ -5,10 +5,13 @@
     "Tim Smith",
     "Tim Siegel"
   ],
-  "build-depends": [
-  ],
-  "depends": [
-  ],
+  "depends": {
+    "test": {
+      "requires": [
+        "JSON::Fast:ver<0.19+>:auth<cpan:TIMOTIMO>"
+      ]
+    }
+  },
   "description": "A logic-free, cross-language templating format",
   "license": "Artistic-2.0",
   "name": "Template::Mustache",
@@ -17,9 +20,6 @@
     "Template::Mustache": "lib/Template/Mustache.rakumod"
   },
   "raku": "6.d",
-  "resources": [
-  ],
-  "source-url": "https://github.com/raku-community-modules/Template-Mustache.git",
   "support": {
     "bugtracker": "https://github.com/raku-community-modules/Template-Mustache/issues",
     "email": "community@raku.org",
@@ -30,8 +30,6 @@
     "template",
     "web",
     "text"
-  ],
-  "test-depends": [
   ],
   "version": "1.2.4"
 }
