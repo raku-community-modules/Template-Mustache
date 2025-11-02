@@ -1,10 +1,10 @@
 use Test;
 use Template::Mustache;
 
-use lib 't/lib';
+use lib $*PROGRAM.sibling("lib");
 use Template::Mustache::TestUtil;
 
-for load-specs().sort -> $spec {
+for load-specs.sort(*.key) -> $spec {
     subtest $spec.key => sub {
         plan +$spec.value;
         for $spec.value<> {
@@ -16,4 +16,4 @@ for load-specs().sort -> $spec {
     }
 }
 
-# vim:set ft=raku:
+# vim: expandtab shiftwidth=4

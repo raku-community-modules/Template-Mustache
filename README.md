@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/softmoth/raku-Template-Mustache.svg?branch=master)](https://travis-ci.org/softmoth/raku-Template-Mustache) [![Windows Status](https://ci.appveyor.com/api/projects/status/github/softmoth/raku-Template-Mustache?branch=master&passingText=Windows%20-%20OK&failingText=Windows%20-%20FAIL&pendingText=Windows%20-%20pending&svg=true)](https://ci.appveyor.com/project/softmoth/raku-Template-Mustache/branch/master)
+[![Actions Status](https://github.com/raku-community-modules/Template-Mustache/actions/workflows/linux.yml/badge.svg)](https://github.com/raku-community-modules/Template-Mustache/actions) [![Actions Status](https://github.com/raku-community-modules/Template-Mustache/actions/workflows/macos.yml/badge.svg)](https://github.com/raku-community-modules/Template-Mustache/actions) [![Actions Status](https://github.com/raku-community-modules/Template-Mustache/actions/workflows/windows.yml/badge.svg)](https://github.com/raku-community-modules/Template-Mustache/actions)
 
 Raku implementation of Mustache templates, [http://mustache.github.io/](http://mustache.github.io/).
 
@@ -166,8 +166,23 @@ TODO
 
   * pragmas (FILTERS?)
 
-License
+AUTHORS
 =======
 
-[Artistic License 2.0](http://www.perlfoundation.org/artistic_license_2_0)
+  * Tim Smith
+
+  * Tim Siegel
+
+Source can be located at: https://github.com/raku-community-modules/Template-Mustache . Comments and Pull Requests are welcome.
+
+COPYRIGHT AND LICENSE
+=====================
+
+Copyright 2014 - 2020 Tim Siegel
+
+Copyright 2021 - 2022 Tim Smith
+
+Copyright 2025 Raku Community
+
+This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 

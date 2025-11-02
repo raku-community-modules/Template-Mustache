@@ -24,4 +24,4 @@ subtest "KEEP-UNUSED-VARIABLES" => sub {
         'Keeps unused variable (instance pragma)';
 }
 
-# vim:set ft=raku:
+# vim: expandtab shiftwidth=4

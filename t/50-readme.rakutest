@@ -69,4 +69,4 @@ is
         EOF
     'Event';
 
-# vim:set ft=raku:
+# vim: expandtab shiftwidth=4

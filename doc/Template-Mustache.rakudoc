@@ -163,7 +163,6 @@ prove -v -e 'raku -Ilib' t/
 The test file C<t/specs/inheritable_partials.json> is taken from
 L<groue/GRMustache|https://github.com/groue/GRMustache>.
 
-
 =head1 Other Mustache Implementations
 
 There are many, many Mustache implementations in various languages. Some of
@@ -175,7 +174,6 @@ note are:
 =item GRMustache (Objective C) L<https://github.com/groue/GRMustache>
 =item mustache.php L<https://github.com/bobthecow/mustache.php>
 
-
 =head1 TODO
 
 =item full object support (with method calls; currently the object is just stringified)
@@ -183,9 +181,24 @@ note are:
 =item database loader
 =item pragmas (FILTERS?)
 
+=head1 AUTHORS
 
-=head1 License
+=item Tim Smith
+=item Tim Siegel
 
-L<Artistic License 2.0|http://www.perlfoundation.org/artistic_license_2_0>
+Source can be located at: https://github.com/raku-community-modules/Template-Mustache .
+Comments and Pull Requests are welcome.
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright 2014 - 2020 Tim Siegel
+
+Copyright 2021 - 2022 Tim Smith
+
+Copyright 2025 Raku Community
+
+This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
 =end pod
+
+# vim: expandtab shiftwidth=4

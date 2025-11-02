@@ -32,4 +32,4 @@ is $stache.render('article', {
     "'article' inherits 'layout' with overrides"
     ;
 
-# vim:set ft=raku:
+# vim: expandtab shiftwidth=4

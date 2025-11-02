@@ -141,4 +141,4 @@ else {
     }
 }
 
-# vim:set ft=raku:
+# vim: expandtab shiftwidth=4

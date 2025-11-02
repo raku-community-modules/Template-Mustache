@@ -1,6 +1,6 @@
-unit class Template::Mustache:ver($?DISTRIBUTION.meta<ver>):auth($?DISTRIBUTION.meta<auth>):api($?DISTRIBUTION.meta<api>);
+unit class Template::Mustache:ver<1.2.4>:auth<zef:raku-community-modules>:api<1.2.0>;
 
-role X[Str:D $err] is Exception {
+role X[Str:D $err] is Exception {  # UNCOVERABLE
     has $.str;
     has $.err = $err;
     method message { "$!err ❮$!str❯" }
@@ -14,8 +14,9 @@ class X::InheritenceLost does X['Non-override content in inheritence section'] {
 
 class Logger {
     # Not using an enum, because when exported it pollutes the namespace
-    our constant LogLevels =
-        <Fatal Error Warn Info Verbose Audit Debug Trace Trace2>.pairs.invert.hash;
+    our constant LogLevels = <
+      Fatal Error Warn Info Verbose Audit Debug Trace Trace2
+    >.antipairs.hash;
     subset LogLevel of Str where { LogLevels{$_}:exists };
 
     class LoggersMap is Hash does Associative[Callable, LogLevel] { }
@@ -141,7 +142,7 @@ class Actions {
                 }
                 else {
                     my $f;
-                    while @frames > 1 {
+                    while @frames > 1 {  # UNCOVERABLE
                         $f = @frames.shift;
                         self.log: :level<Trace>, "*****", $f.raku;
                         last if $f<val> eq $hunk<val>;
@@ -237,17 +238,17 @@ class Actions {
 }
 
 method render(|c (
-    $template,
-    %context,
-    :$from,
-    :$pragma,
-    :$extension is copy,
+          $template,
+          %context,
+         :$from,
+         :$pragma,
+         :$extension is copy,
     Bool :$literal,
-    :$log-level,
-    :$logger,
+         :$log-level,
+         :$logger,
     # Deprecated, please use :log-level<Warn> or higher
     Bool :$warn = False,
-)) {
+)) {  # UNCOVERABLE
     unless self.DEFINITE {
         # If called as Template::Mustache.render(), create an instance
         # to run with
@@ -427,7 +428,7 @@ method render(|c (
                 if $context{$field}.defined {
                     $context{$field}
                 }
-                elsif $context.^can($field) {
+                elsif $context.^can($field) {  # UNCOVERABLE
                     $context."$field"()
                 }
             }
@@ -450,13 +451,13 @@ method render(|c (
                         $result = await $ctx;
                         last;
                     }
-                    elsif $ctx.defined {
+                    elsif $ctx.defined {  # UNCOVERABLE
                         ($result, $lambda) = resolve($ctx);
                         self.log: :level<Trace>, "#** ^ result is $result.raku(), lambda $lambda.raku()";
                         last;
                     }
                 }
-                while $result and !$lambda and @field > 1 {
+                while $result and !$lambda and @field > 1 {  # UNCOVERABLE
                     @field.shift;
                     $result = visit($result, @field[0]);
                     self.log: :level<Trace>, "#** dot field lookup for @field[0] => $result";
@@ -467,7 +468,7 @@ method render(|c (
                     if ! $section and %val<orig>
                         and pragma('KEEP-UNUSED-VARIABLES')
                     {
-                        $encode = Nil;
+                        $encode = Nil;  # UNCOVERABLE
                         $result = %val<orig>;
                     }
                     else {
@@ -569,7 +570,7 @@ method render(|c (
 
                     format(@parsed, @context);
                 }
-                elsif %val<override> {
+                elsif %val<override> {  # UNCOVERABLE
                     format(%*overrides{%val<val>} // %val<contents>, @context);
                 }
                 elsif !%val<inverted> and $datum -> $_ {
@@ -589,7 +590,7 @@ method render(|c (
                         section_format $_
                     }
                 }
-                elsif %val<inverted> and !$datum {
+                elsif %val<inverted> and !$datum {  # UNCOVERABLE
                     format(%val<contents>, @context);
                 }
                 else {
@@ -613,4 +614,4 @@ method render(|c (
     }
 }
 
-# vim:set ft=raku:
+# vim: expandtab shiftwidth=4

@@ -1,14 +1,14 @@
 use Test;
 use Template::Mustache;
 
-use lib 't/lib';
+use lib $*PROGRAM.sibling("lib");
 use Template::Mustache::TestUtil;
 
 constant views = 't/spec-partials'.IO;
 
 my $m = Template::Mustache.new;
 
-for load-specs().sort -> $spec {
+for load-specs.sort -> $spec {
     subtest $spec.key => sub {
         plan +$spec.value;
         for $spec.value<> {

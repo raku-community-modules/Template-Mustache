@@ -1,6 +1,10 @@
 Revision history for Template-Mustache
 
 {{$NEXT}}
+    - First version as a Raku Community Module
+    - Use modern test file extensions
+    - Add coverage tests (still incomplete)
+    - Add CI badge for each OS
 
 1.2.3  2021-03-19T02:00:29-04:00
     - Fix {{.}} lookup in scalar sections

@@ -60,4 +60,4 @@ is Template::Mustache.render(
     'True',
     'Triple-mustache substitution works when field name contains a minus';
 
-# vim:set ft=raku:
+# vim: expandtab shiftwidth=4
