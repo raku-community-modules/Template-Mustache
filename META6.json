@@ -5,6 +5,8 @@
     "Tim Smith",
     "Tim Siegel"
   ],
+  "build-depends": [
+  ],
   "depends": {
     "test": {
       "requires": [
@@ -20,6 +22,9 @@
     "Template::Mustache": "lib/Template/Mustache.rakumod"
   },
   "raku": "6.d",
+  "resources": [
+  ],
+  "source-url": "https://github.com/raku-community-modules/Template-Mustache.git",
   "support": {
     "bugtracker": "https://github.com/raku-community-modules/Template-Mustache/issues",
     "email": "community@raku.org",
@@ -30,6 +35,8 @@
     "template",
     "web",
     "text"
+  ],
+  "test-depends": [
   ],
   "version": "1.2.4"
 }
