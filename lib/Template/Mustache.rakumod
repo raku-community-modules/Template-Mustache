@@ -2,8 +2,7 @@ unit class Template::Mustache:ver<1.2.4>:auth<zef:raku-community-modules>:api<1.
 
 role X[Str:D $err] is Exception {  # UNCOVERABLE
     has $.str;
-    has $.err = $err;
-    method message { "$!err ❮$!str❯" }
+    method message { "$err ❮$!str❯" }
 }
 
 class X::CannotParse does X['Unable to parse'] { }

@@ -1,6 +1,7 @@
 Revision history for Template-Mustache
 
 {{$NEXT}}
+    - Some minor internal tweaks
 
 1.2.4  2025-11-02T19:57:46+01:00
     - First version as a Raku Community Module
