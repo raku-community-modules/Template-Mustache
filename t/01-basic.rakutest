@@ -1,7 +1,7 @@
 use Test;
 use Template::Mustache;
 
-plan 9;
+plan 10;
 
 is Template::Mustache.render(
         Qb[  {{string}}\n],
@@ -59,5 +59,8 @@ is Template::Mustache.render(
     %(:bar-x) ),
     'True',
     'Triple-mustache substitution works when field name contains a minus';
+
+lives-ok { Template::Mustache.new: :log-routine(&say) },
+  'Can specify a log routine';
 
 # vim: expandtab shiftwidth=4

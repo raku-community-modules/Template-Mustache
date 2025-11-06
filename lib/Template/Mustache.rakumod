@@ -77,7 +77,7 @@ has $.pragma;
 has %!cache;
 has $.logger handles <log>;
 
-submethod TWEAK(Callable :&log-routine, :$log-level) {
+submethod TWEAK(:&log-routine, :$log-level) {
     $!logger //= Logger.new: :routine(&log-routine), :level($log-level);
 }
 
