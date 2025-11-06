@@ -1,6 +1,8 @@
 Revision history for Template-Mustache
 
 {{$NEXT}}
+
+1.2.5  2025-11-06T18:25:39+01:00
     - Fix incorrect signature, habere-et-dispertire++
     - Some minor internal tweaks
 
