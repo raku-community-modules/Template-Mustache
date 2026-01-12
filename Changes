@@ -2,6 +2,14 @@ Revision history for Template-Mustache
 
 {{$NEXT}}
 
+1.2.6  2026-01-12T14:43:14+01:00
+    - Todo deeply nested test: for some reason this appears to be
+      dependent on the concatenation of two Junctions where one of
+      the Junctions contains another (embedded) Junction.  However,
+      this has never worked in Rakudo (since 2017.09 it at least
+      creates a Junction if all eigenstates are strings).  So not
+      sure why it was possible to pass tests in 2025.10.
+
 1.2.5  2025-11-06T18:25:39+01:00
     - Fix incorrect signature, habere-et-dispertire++
     - Some minor internal tweaks
