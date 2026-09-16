@@ -1,7 +1,7 @@
 use Test;
 
 sub load-specs (*@specs-dirs) is export {
-    use JSON::Fast;
+    use JSON::Fast:ver<0.21+>:auth<zef:timo>;
     # Set to run a specific test (e.g. '~lambdas:5')
     my ($file, $start, $count) = split ':', %*ENV<TEST_SPEC_START> // '';
     $file ||= '';
